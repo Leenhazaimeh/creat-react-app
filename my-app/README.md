@@ -1,4 +1,42 @@
+Project Name: react Horned Beasts
+This project is the first react app we created.
+
+In lab-01 I created a simple react app structure.
+
+In lab-02 I use state to mak dynamic vote and react bootstrap for styling
+
+Feature #1: Display images
+
+Estimate of time needed to complete: 30 min
+
+Start time: 3:30
+
+Finish time: 4:50
+
+Actual time needed to complete: 50 min
+
+
+
+
+
+
+Author: Leen Hazaimeh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
