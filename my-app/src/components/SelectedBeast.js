@@ -6,31 +6,24 @@ import Card from 'react-bootstrap/Card';
 
 class SelectedBeast extends React.Component {
 
-    handleClose = () => this.props.handleClose();
-    render() {
-        console.log(this.props.Data);
-        return (
+  handleClose = () => this.props.handleClose();
+  render() {
+    return (
 
-            <Modal show={this.props.show} onHide={this.handleClose}>
-                <Modal.Header>
-                    <Modal.Title>{this.props.Data.title}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Card.Img variant="top" src={this.props.Data.image_url} height='250em' />
-                    <p>{this.props.Data.description}</p>
-
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={this.handleClose}>
-                        Close
-        </Button>
-                    {/* <Button variant="primary" onClick={this.handleClose}>
-                        Save Changes
-        </Button> */}
-                </Modal.Footer>
-            </Modal>
-        )
-    }
+      <Modal show={this.props.show} onHide={this.handleClose}>
+        <Modal.Header>
+          <Modal.Title>{this.props.Data.title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Card.Img variant="top" src={this.props.Data.image_url} height='250em' />
+          <p>{this.props.Data.description}</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={this.handleClose}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    )
+  }
 
 }
 
