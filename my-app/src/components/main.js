@@ -1,30 +1,23 @@
-import React from 'react';
-import HornedBeast from './HornedBeast';
-
-
-class Main extends React.Component{
   
-    render(){
-        return(
-            this.props.Data.map((value)=>{
-                
-                return(
-                
-                <HornedBeast 
-                title= {value.title}
-                img = {value.image_url}
-                keyword={value.keyword}
-                description={value.description}
-                horns={value.horns}
-                selectedUpdate= {this.props.selectedUpdate}
-                />
-                
-                
-                )
-            })
-        )
-    }
+import React from 'react';
+import HornedBeasts from './HornedBeast';
+import JSONData from './Data.json';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+class Main extends React.Component {
+
+  render() {
+
+    return (
+      <div className='card-group'>
+        {JSONData.map(item => {
+          return (
+            <HornedBeasts title={item.title} hornsCount={item.horns} imgUrl={item.image_url} description={item.description} keyword={item.keyword} />
+          );
+        })}
+      </div>
+
+    );
+  }
 }
-
-
 export default Main;
