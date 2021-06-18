@@ -4,6 +4,8 @@ This project is the first react app we created.
 In lab-01 I created a simple react app structure.
 
 In lab-02 I use state to mak dynamic vote and react bootstrap for styling
+In lab-03 I use state to mak dynamic vote and react bootstrap for styling and added card 
+In lab-04 I use state to mak dynamic vote and react bootstrap for styling and added a modul and fillter
 
 Feature #1: Display images
 
