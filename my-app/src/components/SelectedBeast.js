@@ -1,39 +1,43 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'     
+
+class SelectedBeast extends React.Component{
+    
+  // handleClose = () => {
+  //   this.props.handleClose()
+  // }
+
+    render(){
 
 
-class SelectedBeast extends React.Component {
 
-    handleClose = () => this.props.handleClose();
-    render() {
-        console.log(this.props.Data);
-        return (
+        return(
 
-            <Modal show={this.props.show} onHide={this.handleClose}>
-                <Modal.Header>
-                    <Modal.Title>{this.props.Data.title}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Card.Img variant="top" src={this.props.Data.image_url} height='250em' />
-                    <p>{this.props.Data.description}</p>
+             <Modal show={this.props.show} onHide={this.props.handleClose}>
+              
+                    <Modal.Header closeButton>
 
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={this.handleClose}>
+                    
+                      <Modal.Title>{this.props.selectedAnimal.title} </Modal.Title>
+
+                    </Modal.Header>
+                    <Card.Img  variant="top" src={this.props.selectedAnimal.image_url} />
+                    <Modal.Body>{this.props.selectedAnimal.description}</Modal.Body>
+                    <Modal.Footer>
+                      <Button variant="primary" onClick={this.props.handleClose}>
                         Close
-        </Button>
-                    {/* <Button variant="primary" onClick={this.handleClose}>
-                        Save Changes
-        </Button> */}
-                </Modal.Footer>
-            </Modal>
+                      </Button>
+                      
+                    </Modal.Footer>
+                    
+                  </Modal> 
         )
+
     }
-
 }
-
 
 
 export default SelectedBeast;
