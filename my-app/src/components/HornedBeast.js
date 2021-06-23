@@ -26,7 +26,7 @@ class HornedBeasts extends React.Component {
             <Card.Text>
               {this.props.description}<br/>
               <br/> <h4>horns: {this.props.hornsCount}</h4><br/>
-              <h5>Votes: {this.state.clicks}</h5><br/>
+              <h5>Votes❤️: {this.state.clicks}</h5><br/>
             </Card.Text>
             <Button onClick={this.animalsClicks} variant="primary">Click to Vote</Button>
           </Card.Body>
